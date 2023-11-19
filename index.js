@@ -1,4 +1,5 @@
 const app = require("express")();
+const cors = require('cors')
 const express = require('express')
 const session = require("express-session");
 const mongoose = require("mongoose");
@@ -20,6 +21,7 @@ mongoose
   });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors())
 app.use(express.json())
 app.use(
   session({
