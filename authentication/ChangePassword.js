@@ -11,7 +11,7 @@ async function forgotpassword(req,res){
     const user = new TokenModel({email:email,token:token,during:TokenResetExpires}) ;
     console.log(token)
     console.log('we are here',email)
-    EmailSender(token,email)
+    /* EmailSender(token,email) */
     user.save()
 }
 
